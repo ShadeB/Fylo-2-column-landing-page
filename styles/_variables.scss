@@ -6,3 +6,12 @@ $bright-blue: hsl(224, 93%, 58%);
 $moderate-cyan: hsl(170, 45%, 43%);
 $light-grayish-blue: hsl(240, 75%, 98%);
 $light-gray: hsl(0, 0%, 75%);
+
+$font-weights: (
+	'regular': 400,
+	'bold': 700
+);
+
+@function font-weights($weight-name) {
+	@return map-get($font-weights, $weight-name);
+}
