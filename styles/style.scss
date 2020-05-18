@@ -1,0 +1,8 @@
+@import './resets';
+@import './variables';
+
+body {
+	font-size: 1.6rem;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: font-weights(regular);
+}
