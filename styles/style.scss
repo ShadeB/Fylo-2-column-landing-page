@@ -7,6 +7,12 @@
 	align-items: center;
 }
 
+@mixin mediaQuery($screen-size) {
+	@media screen and (min-width: $screen-size) {
+		@content;
+	}
+}
+
 body {
 	font-size: $font-size;
 	font-family: 'Open Sans', sans-serif;
