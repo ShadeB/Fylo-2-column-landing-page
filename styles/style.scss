@@ -7,6 +7,10 @@
 	align-items: center;
 }
 
+@mixin flexDirection($direction) {
+	flex-direction: $direction;
+}
+
 @mixin mediaQuery($screen-size) {
 	@media screen and (min-width: $screen-size) {
 		@content;
@@ -30,6 +34,10 @@ h2 {
 
 .layout {
 	padding: 2rem;
+
+	@include mediaQuery($Tablet) {
+		padding: 4rem;
+	}
 }
 
 .container {
@@ -75,6 +83,24 @@ h2 {
 
 .hero {
 	text-align: center;
+
+	@include mediaQuery($PC) {
+		@include flexJustify(center);
+		@include flexDirection(row-reverse);
+
+		&__content {
+			text-align: left;
+
+			& .section__heading__hero {
+				text-align: left;
+			}
+		}
+
+		.form {
+			@include flexJustify(center);
+			@include flexDirection(row);
+		}
+	}
 }
 
 .form {
@@ -131,6 +157,10 @@ h2 {
 }
 
 .product {
+	@include mediaQuery($Tablet) {
+		@include flexJustify(center);
+		@include flexDirection(row-reverse);
+	}
 	&__overview {
 		> p:nth-child(2) {
 			margin: 1rem 0;
