@@ -20,6 +20,12 @@ ul {
 
 a {
   text-decoration: none;
+  color: inherit;
+}
+
+button {
+  outline: none;
+  border: none;
 }
 
 img {
@@ -27,9 +33,320 @@ img {
   max-width: 100%;
 }
 
+.container {
+  margin: 0 auto;
+  width: 100%;
+}
+
 body {
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
+  background-color: white;
+  color: #585989;
+  line-height: 1.3;
+}
+
+h1,
+h2 {
+  font-family: 'Raleway', sans-serif;
+  color: #070439;
+}
+
+.layout {
+  padding: 2rem;
+}
+
+.container {
+  max-width: 1200px;
+}
+
+.container > div {
+  padding: 4rem 0;
+}
+
+.header {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+}
+
+.header .header__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header .header__nav .logo {
+  max-width: 8rem;
+}
+
+.header .header__nav .nav-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header .header__nav .nav-list li {
+  padding: 1rem;
+}
+
+.section__heading, .section__heading__hero {
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin: 3rem 0;
+  text-align: center;
+}
+
+.section__heading__hero {
+  font-size: 2.5rem;
+}
+
+.hero {
+  text-align: center;
+}
+
+.form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.form * {
+  margin-top: 2.5rem;
+  border-radius: 5px;
+}
+
+.form input[type='email'] {
+  padding: 2rem;
+  outline: none;
+  border: 1px solid #585989;
+}
+
+.form input[type='email']::-webkit-input-placeholder {
+  color: #bfbfbf;
+  font-size: 1.5rem;
+}
+
+.form input[type='email']:-ms-input-placeholder {
+  color: #bfbfbf;
+  font-size: 1.5rem;
+}
+
+.form input[type='email']::-ms-input-placeholder {
+  color: #bfbfbf;
+  font-size: 1.5rem;
+}
+
+.form input[type='email']::placeholder {
+  color: #bfbfbf;
+  font-size: 1.5rem;
+}
+
+.form button[type='submit'] {
+  padding: 1.8rem;
+  background-color: #3065f8;
+  color: #f6f6fe;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.background__light-blue {
+  background-color: #f6f6fe;
+  position: relative;
+  margin-top: 8rem;
+}
+
+.background__light-blue::before {
+  content: '';
+  position: absolute;
+  height: 4rem;
+  width: 100%;
+  left: 0;
+  top: -4rem;
+  background-image: url("/images/bg-curve-mobile.svg");
+  background-position: center;
+  background-size: cover;
+}
+
+.background__dark-blue {
+  background-color: #585989;
+}
+
+.product__overview > p:nth-child(2) {
+  margin: 1rem 0;
+}
+
+.product__overview-link {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin: 3rem auto;
+  color: #3c9f8f;
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.product__overview-link::after {
+  content: '';
+  position: absolute;
+  display: block;
+  background-color: #3c9f8f;
+  width: 100%;
+  height: 2px;
+  left: 0;
+  top: 1px;
+  margin-top: 2.5rem;
+}
+
+.product__overview-link img {
+  margin-left: 0.5rem;
+}
+
+.product__overview .testimonial__card {
+  background-color: white;
+  max-width: 30rem;
+  padding: 2.8rem;
+  font-size: 1.1rem;
+  margin: auto;
+  border-radius: 0.5rem;
+}
+
+.product__overview .testimonial__card img {
+  margin-bottom: 1rem;
+}
+
+.product__overview .testimonial__card-client {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 2rem;
+}
+
+.product__overview .testimonial__card-client img {
+  max-width: 4rem;
+  border-radius: 50%;
+}
+
+.product__overview .testimonial__card-client-info {
+  margin-left: 1rem;
+}
+
+.cta__section {
+  color: white;
+  padding-bottom: 6rem;
+}
+
+.cta__section div {
+  padding: 1.8rem;
+  text-align: center;
+}
+
+.cta__section div .section__heading, .cta__section div .section__heading__hero {
+  font-size: 2rem;
+  color: white;
+}
+
+.cta__section div .form {
+  max-width: 27rem;
+  margin: auto;
+}
+
+.cta__section div .form input[type='email'] {
+  padding: 1.4rem;
+}
+
+.cta__section div .form button[type='submit'] {
+  margin-top: 1rem;
+  padding: 1.4rem;
+}
+
+.footer.background__primary-blue {
+  background-color: #070439;
+}
+
+.footer .layout {
+  padding: 4rem;
+}
+
+.footer__logo {
+  margin: 2rem 0;
+  width: 15rem;
+}
+
+.footer__content {
+  color: white;
+}
+
+.footer__content-group .footer__contacts .contact {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 3rem 1fr;
+      grid-template-columns: 3rem 1fr;
+  margin: 2rem 0;
+  gap: 0.5rem;
+}
+
+.footer__content-group .footer__link {
+  margin: 2rem 0;
+}
+
+.footer__content-group .social-icons-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 3rem 0;
+}
+
+.footer__content-group .social-icons-container li {
+  width: 4rem;
+  height: 4rem;
+  border: solid #fff 0.1rem;
+  border-radius: 50%;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.footer__content-group .social-icons-container li:not(:first-child) {
+  margin-left: 1rem;
+}
+
+.footer__content-group .social-icons-container li .fab {
+  padding: 1rem;
+  color: #fff;
+  margin: 1rem;
+  font-size: 2.5rem;
+  text-align: center;
+  border-radius: 50%;
 }
 /*# sourceMappingURL=style.css.map */
